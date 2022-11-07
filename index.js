@@ -4,11 +4,12 @@ const { todoRouter } = require("./routes/Todo.routes")
 const { userRouter } = require("./routes/User.routes")
 const {TodoModel} = require("./models/TodoModel")
 const cors = require("cors")
-app.use(cors())
+
 const jwt = require("jsonwebtoken")
 const { authentication } = require("./middlewares/authentication")
 const app = express()
 app.use(express.json())
+app.use(cors())
 
 
 const PORT = process.env.PORT || 8500
